@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>ユーザー情報詳細・編集</title>
+  </head>
+  <body>
+    <div>
+      <label for="user">ユーザー名</label>
+      <span id="user_name" name="user">Tanaka</span>
+    </div>
+    <div>
+      <label for="mail">ユーザー名</label>
+      <span id="mail_address" name="mail">sample@example.com</span>
+    </div>
+
+        <!--ここからモーダル表示・非表示のために追記しました。-->
+        <!--お問い合わせフォームボタンを作成。ボタンをクリックしたときに発火させるため、idとclassを付けた。-->
+        <div id="user_show" class="submit">
+          <button type="submit" class="inquire_btn">
+            編集
+          </button>
+        </div>
+        <!--ボタンクリック前までは、CSS上の記述「display:none;」で非表示になっている部分＝モーダル-->
+        <div id="user_modal" class="inquire_modal_wrapper">
+          <div class="modal">
+            <!--モーダル部分の閉じるボタン。50行目まで。-->
+            <div id="close_modal_user">
+              <i class="close_btn">×</i>
+            </div>
+            <!--ここから94行目までは問い合わせフォーム本体（day1ペアワーク課題から新たに加えた点は、inputのplaceholder属性。）-->
+            <article class="content">
+              <form action="" method="post">
+                <div>
+                  <label for="user">ユーザー名</label>
+                  <input type="text" name="user" id="user" value="">
+                </div>
+                <div class="submit">
+                  <button type="submit" class="btn">送信</button>
+                </div>
+              </form>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!--お問い合わせフォームボタンを作成。ボタンをクリックしたときに発火させるため、idとclassを付けた。-->
+      <div id="mail_show" class="submit">
+        <button type="submit" class="inquire_btn">
+          編集
+        </button>
+      </div>
+      <!--ボタンクリック前までは、CSS上の記述「display:none;」で非表示になっている部分＝モーダル-->
+      <div id="mail_modal" class="inquire_modal_wrapper">
+        <div class="modal">
+          <!--モーダル部分の閉じるボタン。50行目まで。-->
+          <div id="close_modal_mail">
+            <i class="close_btn">×</i>
+          </div>
+          <!--ここから94行目までは問い合わせフォーム本体（day1ペアワーク課題から新たに加えた点は、inputのplaceholder属性。）-->
+          <article class="content">
+            <form action="" method="post">
+              <div>
+                <label for="mail">メールアドレス</label>
+                <input type="email" name="mail" id="mail" value="">
+              </div>
+              <div class="submit">
+                <button type="submit" class="btn">送信</button>
+              </div>
+            </form>
+          </article>
+        </div>
+      </div>
+    </div>
+    
+
+    <!--jQueryライブラリの読み込み。<head>タグに入れてもOKのようだが、</body>直前で記述すると処理が速く済むらしい。-->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <!--処理速度を速くするため、また可読性を上げるため、jQueryの記述は、jsファイルに分けた。-->
+    <script src="script_copy.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+/*「問い合わせフォームはこちら」ボタン*/
+.inquire_btn {
+  background-color: #cf5555;
+  padding: 10px 20px;
+  color: white;
+}
+/*モーダル本体の背景色やz-indexの設定。もちろん、displayはnoneにする。*/
+.inquire_modal_wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+}
+/*問い合わせフォーム本体の背景色や幅などの設定。*/
+.modal {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  background-color: #e6ecf0;
+  padding: 20px 0 20px;
+  border-radius: 10px;
+  width: 500px;
+  height: auto;
+  text-align: center;
+}
+/*閉じるボタン「X」の設定。右上に設置したり、ボタンを大きくしたり。*/
+.close_btn {
+  margin-right: 5px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: rgba(128, 128, 128, 0.46);
+  cursor: pointer;
+  font-size: 3rem;
+}
